@@ -1,12 +1,16 @@
 package pkgGame;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
 
-import org.junit.Test;
+
 
 public class SudokuTest {
 
@@ -27,11 +31,13 @@ public class SudokuTest {
 
 	}
 
-	@Test(expected = Exception.class)
-	public void Sudoku_Test2() throws Exception {
-
-		Sudoku s1 = new Sudoku(10);
-
+	@Test
+	public void Sudoku_Test2() {
+	 
+	  Assertions.assertThrows(Exception.class, () -> {
+		  Sudoku s1 = new Sudoku(10);
+	  });
+	 
 	}
 
 	@Test
