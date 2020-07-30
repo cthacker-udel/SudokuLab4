@@ -9,7 +9,6 @@ import pkgHelper.LatinSquare;
  * Sudoku - This class extends LatinSquare, adding methods, constructor to
  * handle Sudoku logic
  * 
- * @version 1.2
  * @since Lab #2
  * @author Bert.Gibbons
  *
@@ -20,7 +19,6 @@ public class Sudoku extends LatinSquare {
 	 * 
 	 * iSize - the length of the width/height of the Sudoku puzzle.
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 */
 	private int iSize;
@@ -28,8 +26,6 @@ public class Sudoku extends LatinSquare {
 	/**
 	 * iSqrtSize - SquareRoot of the iSize. If the iSize is 9, iSqrtSize will be
 	 * calculated as 3
-	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 */
 
@@ -41,7 +37,6 @@ public class Sudoku extends LatinSquare {
 	 * set iSize If SquareRoot(iSize) is an integer, set iSqrtSize, otherwise throw
 	 * exception
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 * @param iSize-
 	 *            length of the width/height of the puzzle
@@ -68,7 +63,6 @@ public class Sudoku extends LatinSquare {
 	 * Sudoku - pass in a given two-dimensional array puzzle, create an instance.
 	 * Set iSize and iSqrtSize
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 * @param puzzle
 	 *            - given (working) Sudoku puzzle. Use for testing
@@ -91,7 +85,6 @@ public class Sudoku extends LatinSquare {
 	/**
 	 * getPuzzle - return the Sudoku puzzle
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 * @return - returns the LatinSquare instance
 	 */
@@ -114,8 +107,7 @@ public class Sudoku extends LatinSquare {
 	 * 
 	 * @param iCol - Given column number
 	 * @param iRow - Given row number
-	 * @version 1.3
-	 * @since Lab #3
+	 * @since Lab #2
 	 * 
 	 * @return - return region number based on given column and row
 	 */
@@ -139,7 +131,6 @@ public class Sudoku extends LatinSquare {
 	 * 
 	 * getRegion(0,3) would call getRegion(1) and return [2],[3],[3],[4]
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 * @param iCol
 	 *            given column
@@ -167,7 +158,6 @@ public class Sudoku extends LatinSquare {
 	 * 
 	 * getRegion(2) and return [3],[4],[4],[1]
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 * @param r
 	 *            given region
@@ -201,7 +191,6 @@ public class Sudoku extends LatinSquare {
 	 * the elemnts is a zero
 	 * 
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 * @return true if the given puzzle is a partial sudoku
 	 */
@@ -235,7 +224,6 @@ public class Sudoku extends LatinSquare {
 	 * 
 	 * Is a partialSudoku Each element doesn't a zero
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 * @return - returns 'true' if it's a partialSudoku, element match (row versus
 	 *         column) and no zeros
@@ -257,7 +245,6 @@ public class Sudoku extends LatinSquare {
 	 * isValidValue - test to see if a given value would 'work' for a given column /
 	 * row
 	 * 
-	 * @version 1.2
 	 * @since Lab #2
 	 * @param iCol
 	 *            puzzle column
@@ -311,7 +298,6 @@ public class Sudoku extends LatinSquare {
 	 * FillDiagonalRegions - After the puzzle is created, set the diagonal regions
 	 * with random values
 	 * 
-	 * @version 1.3
 	 * @since Lab #3
 	 */
 	private void FillDiagonalRegions() {
@@ -341,7 +327,6 @@ public class Sudoku extends LatinSquare {
 	 * 1 2 0 0 <br>
 	 * 3 4 0 0 <br>
 	 * 
-	 * @version 1.3
 	 * @since Lab #3
 	 * @param r
 	 *            - Given region number
@@ -394,7 +379,6 @@ public class Sudoku extends LatinSquare {
 	/**
 	 * shuffleArray this method will shuffle a given one-dimension array
 	 * 
-	 * @version 1.3
 	 * @since Lab #3
 	 * @param ar
 	 *            given one-dimension array
