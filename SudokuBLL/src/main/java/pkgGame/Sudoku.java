@@ -13,7 +13,7 @@ import pkgHelper.LatinSquare;
  * @author Bert.Gibbons
  *
  */
-public class Sudoku extends LatinSquare { // example comment
+public class Sudoku extends LatinSquare {
 
 	/**
 	 * 
