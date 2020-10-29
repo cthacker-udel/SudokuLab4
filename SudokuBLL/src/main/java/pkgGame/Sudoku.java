@@ -63,6 +63,8 @@ public class Sudoku extends LatinSquare {
 		int[][] puzzle = new int[iSize][iSize];
 		super.setLatinSquare(puzzle);
 		FillDiagonalRegions();
+		//TODO SetCells();
+		//TODO fillRemaining(this.cells.get(Objects.hash(0,iSqrtSize)));
 	}
 
 	/**
@@ -378,6 +380,16 @@ public class Sudoku extends LatinSquare {
 		for (int i = (r / iSqrtSize) * iSqrtSize; i < ((r / iSqrtSize) * iSqrtSize) + iSqrtSize; i++) {
 			for (int j = (r % iSqrtSize) * iSqrtSize; j < ((r % iSqrtSize) * iSqrtSize) + iSqrtSize; j++) {
 				this.getPuzzle()[i][j] = region[iCnt++];
+			}
+		}
+	}
+	
+	//TODO CHECK IMPLEMENTATION
+	private void SetCells(){
+		for(int i = 0; i < this.iSize; i++) {
+			for(int j = 0; j < this.iSize; j++) {
+				Cell c = new Cell(i,j);
+				cells.put(c.hashCode(), c);
 			}
 		}
 	}
