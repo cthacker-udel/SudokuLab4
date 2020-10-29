@@ -393,13 +393,12 @@ public class Sudoku extends LatinSquare {
 			}
 		}
 	}
-	/*
+	
 	private java.util.HashSet<java.lang.Integer> getAllValidCellValues(int iCol, int iRow){
 		Cell c = new Cell(iCol,iRow);
 		java.util.HashSet<java.lang.Integer> lstvalidvalues = new java.util.HashSet();
 		
 	}
-	*/
 
 	/**
 	 * shuffleArray this method will shuffle a given one-dimension array
@@ -467,17 +466,8 @@ public class Sudoku extends LatinSquare {
 			return this.lstValidValues;
 		}
 		
-		//TODO: CHECK IMPLEMENTATION
 		public void setlstValidValues(HashSet<Integer> hsValidValues) {
-			
 			lstValidValues = new ArrayList<Integer>(hsValidValues);
-			for(int i = 0; i < 10; i++) {
-				if(isValidValue(iRow,iCol,i)) {
-					hsValidValues.add(i);
-				}
-			}
-			hsValidValues.addAll(lstValidValues);
-			
 		}
 		
 		public void ShuffleValidValues() {
