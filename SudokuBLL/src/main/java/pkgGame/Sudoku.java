@@ -18,6 +18,8 @@ import pkgHelper.LatinSquare;
  *
  */
 public class Sudoku extends LatinSquare {
+	
+	private java.util.HashMap<java.lang.Integer,Sudoku.Cell> cells;
 
 	/**
 	 * 
