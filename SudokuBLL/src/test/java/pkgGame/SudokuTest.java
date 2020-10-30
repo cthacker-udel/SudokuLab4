@@ -128,6 +128,11 @@ public class SudokuTest {
 		}
 
 	}
+	
+	@Test
+	public void Sudoku_Partial_1() {
+		//TODO: DANIEL
+	}
 
 
 

@@ -60,11 +60,8 @@ public class Sudoku extends LatinSquare {
 			throw new Exception("Invalid size");
 		}
 
-		int[][] puzzle = new int[iSize][iSize];
-		super.setLatinSquare(puzzle);
-		FillDiagonalRegions();
-		//TODO SetCells();
-		//TODO fillRemaining(this.cells.get(Objects.hash(0,iSqrtSize)));
+		//TODO: DANIEL
+		//IMPLEMENT REMAINDER OF CONSTRUCTOR
 	}
 
 	/**
@@ -87,6 +84,9 @@ public class Sudoku extends LatinSquare {
 		} else {
 			throw new Exception("Invalid size");
 		}
+		
+		//TODO: DANIEL
+		//implement remainder of constructor <-- ask Gibbons for this constructor
 
 	}
 
@@ -279,6 +279,11 @@ public class Sudoku extends LatinSquare {
 		
 		return true;
 	}
+	
+	//TODO: WESLEY
+	public boolean isValidValue(Sudoku.Cell cell, int value) {
+		return false;
+	}
 
 	/**
 	 * PrintPuzzle This method will print the puzzle to the console (space between
@@ -384,25 +389,48 @@ public class Sudoku extends LatinSquare {
 		}
 	}
 	
-	//TODO CHECK IMPLEMENTATION
+	/**
+	 * @author CAMERON
+	 */
+	//TODO: SHAOZHE <--- DOUBLE CHECK IMPLEMENTATION
 	private void SetCells(){
 		for(int i = 0; i < this.iSize; i++) {
 			for(int j = 0; j < this.iSize; j++) {
+				java.util.HashSet<java.lang.Integer> lstvalidvalues = this.getAllValidCellValues(i, j);
 				Cell c = new Cell(i,j);
+				c.setlstValidValues(lstvalidvalues);
+				c.ShuffleValidValues();
+				//cells.put(c.hashCode(), c.getLstValidValues().get(0));
+				System.out.println(c.hashCode());
 				cells.put(c.hashCode(), c);
 			}
 		}
 	}
-	//TODO CHECK IMPLEMENTATION
-	private java.util.HashSet<java.lang.Integer> getAllValidCellValues(int iCol, int iRow){
-		java.util.HashSet<java.lang.Integer> lstvalidvalues = new HashSet<Integer>();
-		for(int i = 1; i < 10; i++) {
-			if(this.isValidValue(iCol,iRow,i)) {
-				lstvalidvalues.add(i);
+	
+	/**
+	 * @author CAMERON
+	 */
+	
+	//TODO: ZACK DOUBLE CHECK IMPLEMENTATION
+	private void ShowAvailableValues() {
+		for(int iRow = 0; iRow < iSize; iRow++) {
+			for(int iCol = 0; iCol < iSize; iCol++) {
+				Cell c = cells.get(Objects.hash(iRow,iCol));
+				for(Integer i: c.getLstValidValues()) {
+					System.out.print(i + " ");
+				}
+				System.out.println("");
 			}
 		}
-		return lstvalidvalues;
-		
+	}
+	//TODO SHAOZHE
+	private java.util.HashSet<java.lang.Integer> getAllValidCellValues(int iCol, int iRow){
+		return null; // example return
+	}
+	
+	//TODO: WESLEY
+	private boolean fillRemaining(Cell c) {
+		return false; // provided in video
 	}
 
 	/**
