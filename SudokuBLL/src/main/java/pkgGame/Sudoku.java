@@ -48,6 +48,11 @@ public class Sudoku extends LatinSquare {
 	 *            length of the width/height of the puzzle
 	 * @throws Exception
 	 *             if the iSize given doesn't have a whole number square root
+	 * Create a new puzzle of size size
+	 * Set the LatinSquare to the puzzle
+	 * Fill the diagonal regions by calling the function
+	 * Call SetCells
+	 * Call fillRemaining
 	 */
 	public Sudoku(int iSize) throws Exception {
 
@@ -60,8 +65,12 @@ public class Sudoku extends LatinSquare {
 			throw new Exception("Invalid size");
 		}
 
-		//TODO: DANIEL
-		//IMPLEMENT REMAINDER OF CONSTRUCTOR
+		int[][] puzzle = new int[iSize][iSize];
+		super.setLatinSquare(puzzle);
+		
+		FillDiagonalRegions();
+		SetCells();
+		fillRemaining(this.cells.get(Objects.hash(0, iSqrtSize)));
 	}
 
 	/**
@@ -74,6 +83,7 @@ public class Sudoku extends LatinSquare {
 	 * @throws Exception
 	 *             will be thrown if the length of the puzzle do not have a whole
 	 *             number square root
+	 * 
 	 */
 	public Sudoku(int[][] puzzle) throws Exception {
 		super(puzzle);
@@ -85,8 +95,7 @@ public class Sudoku extends LatinSquare {
 			throw new Exception("Invalid size");
 		}
 		
-		//TODO: DANIEL
-		//implement remainder of constructor <-- ask Gibbons for this constructor
+		
 
 	}
 
