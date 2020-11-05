@@ -434,11 +434,17 @@ public class Sudoku extends LatinSquare {
 	}
 	//TODO SHAOZHE
 	private java.util.HashSet<java.lang.Integer> getAllValidCellValues(int iCol, int iRow){
-		HashSet<Interget> cellsrange =new HashSet<Interget>();
+		HashSet<Integer> cellsrange =new HashSet<Integer>();
+		java.util.HashSet<java.lang.Integer> lstvalidvalues=new HashSet<Integer>();
 		for (int i = 1; i < iSize; i++) {
 			cellsrange.add(i);
 		}
-		return null;
+		for (int i=1; i<iSize; i++) {
+			if (this.isValidValue(iRow, iCol, i)) {
+				lstvalidvalues.add(i);
+			}
+		}
+		return lstvalidvalues;
 	}
 	
 	//TODO: WESLEY
