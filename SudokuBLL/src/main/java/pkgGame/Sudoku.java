@@ -448,7 +448,23 @@ public class Sudoku extends LatinSquare {
 	}
 	
 	//TODO: WESLEY
+	/*
+	 * Author Wesley
+	 * 
+	 */
 	private boolean fillRemaining(Cell c) {
+		if(cell == null) {
+			return true;
+		}
+		for(int num: c.getLstValidValues()) {
+			if(isValidValue(c,num)) {
+				this.getPuzzle()[c.getiRow][c.getiCol()] = num;
+				if(fillRemaining(c.GetNextCell(c))) {
+					return true;
+				}
+				this.getPuzzle()[c.getiRow][c.getiCol()] = 0;
+			}
+		}
 		return false; // provided in video
 	}
 
