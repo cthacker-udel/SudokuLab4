@@ -291,7 +291,9 @@ public class Sudoku extends LatinSquare {
 	
 	//TODO: WESLEY
 	public boolean isValidValue(Sudoku.Cell cell, int value) {
-		return false;
+		row =cell.getiRow;
+		col = cell.getiCol;
+		return isValidValue(row,col,value);
 	}
 
 	/**
