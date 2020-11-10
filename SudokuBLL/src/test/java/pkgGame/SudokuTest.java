@@ -155,7 +155,21 @@ public class SudokuTest {
 	        }
 	}
 
-
+	@Test
+	public void Sudoku_Random_Test(){
+		
+		try {
+			Sudoku sudoku1 = new Sudoku(9);
+			sudoku1.PrintPuzzle();
+			Sudoku sudoku2 = new Sudoku(9);
+			sudoku2.PrintPuzzle();
+			System.out.println("Test is supposed to fail");
+			assertEquals(sudoku1,sudoku2);
+		}
+		catch(Exception e) {
+			fail("Failed to build Sudoku");
+		}
+	}
 
 
 

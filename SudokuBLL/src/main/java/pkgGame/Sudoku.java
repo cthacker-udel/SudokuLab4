@@ -19,7 +19,7 @@ import pkgHelper.LatinSquare;
  */
 public class Sudoku extends LatinSquare {
 	
-	private java.util.HashMap<java.lang.Integer,Sudoku.Cell> cells;
+	private java.util.HashMap<java.lang.Integer,Sudoku.Cell> cells = new java.util.HashMap();
 
 	/**
 	 * 
@@ -409,9 +409,7 @@ public class Sudoku extends LatinSquare {
 				Cell c = new Cell(i,j);
 				c.setlstValidValues(lstvalidvalues);
 				c.ShuffleValidValues();
-				//cells.put(c.hashCode(), c.getLstValidValues().get(0));
-				System.out.println(c.hashCode());
-				cells.put(c.hashCode(), c);
+				this.cells.put(c.hashCode(), c);
 			}
 		}
 	}
