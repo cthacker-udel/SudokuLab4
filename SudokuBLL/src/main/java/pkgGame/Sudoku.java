@@ -289,7 +289,6 @@ public class Sudoku extends LatinSquare {
 		return true;
 	}
 	
-	//TODO: WESLEY
 	public boolean isValidValue(Sudoku.Cell cell, int value) {
 		int row =cell.getiRow();
 		int col = cell.getiCol();
@@ -403,7 +402,6 @@ public class Sudoku extends LatinSquare {
 	/**
 	 * @author CAMERON
 	 */
-	//TODO: SHAOZHE <--- DOUBLE CHECK IMPLEMENTATION
 	private void SetCells(){
 		for(int i = 0; i < this.iSize; i++) {
 			for(int j = 0; j < this.iSize; j++) {
@@ -422,7 +420,6 @@ public class Sudoku extends LatinSquare {
 	 * @author CAMERON
 	 */
 	
-	//TODO: ZACK DOUBLE CHECK IMPLEMENTATION
 	private void ShowAvailableValues() {
 		for(int iRow = 0; iRow < iSize; iRow++) {
 			for(int iCol = 0; iCol < iSize; iCol++) {
@@ -434,7 +431,6 @@ public class Sudoku extends LatinSquare {
 			}
 		}
 	}
-	//TODO SHAOZHE
 	private java.util.HashSet<java.lang.Integer> getAllValidCellValues(int iCol, int iRow){
 		HashSet<Integer> cellsrange =new HashSet<Integer>();
 		java.util.HashSet<java.lang.Integer> lstvalidvalues=new HashSet<Integer>();
@@ -448,8 +444,7 @@ public class Sudoku extends LatinSquare {
 		}
 		return lstvalidvalues;
 	}
-	
-	//TODO: WESLEY
+
 	/*
 	 * Author Wesley
 	 * 
